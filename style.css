@@ -1,0 +1,93 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.post-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+}
+.post{
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    display: block;
+}
+.post-image{
+    margin:0;
+}
+.post-image img{
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay{
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.post:hover .post-overlay{
+    display: flex;
+}
+.post-like,
+.post-comments{
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+@media screen and (max-width: 768px){
+   .post-list{
+    gap:3px;
+   }
+}
+header nav{
+    display: flex;  
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+    justify-content: space-between;
+    align-items: center;
+}
+.buscador input{
+    height: 30px;
+    width: 180px;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #e1e1e1;
+    box-shadow: 3px  #e1e1e1;
+    border-radius: 5px;
+
+}
+input span img{
+    /* display: inline-block; */
+    /* vertical-align: baseline; */
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+     
+}
+.set input{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+main{
+    grid-template: repeat();
+}
+

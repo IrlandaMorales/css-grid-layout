@@ -4,104 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>columnas</title>
-    <style>
-       body{
-           margin: 0;
-           font-family: Arial, Helvetica, sans-serif;
-       }
-       .post-list{
-           display: grid;
-           grid-template-columns: repeat(3, minmax(100px, 293px));
-           justify-content: center;
-           gap: 28px;
-       }
-       .post{
-           cursor: pointer;
-           position: relative;
-           /* width: 200px; */
-           display: block;
-       }
-       .post-image{
-           margin:0;
-       }
-       .post-image img{
-           width: 100%;
-           vertical-align: top;
-       }
-       .post-overlay{
-           background: rgba(0, 0, 0, .4);
-           position: absolute;
-           left: 0;
-           right: 0;
-           bottom: 0;
-           top: 0;
-           display: none;
-           align-items: center;
-           justify-content: center;
-           color: white;
-           text-align: center;
-       }
-       .post:hover .post-overlay{
-           display: flex;
-       }
-       .post-like,
-       .post-comments{
-           width: 80px;
-           margin: 5px;
-           font-weight: bold;
-           text-align: center;
-           display: inline-block;
-       }
-       @media screen and (max-width: 768px){
-          .post-list{
-           gap:3px;
-          }
-       }
-       header nav{
-           background: #eeeeee;
-           max-width: 100%;
-           height: 50px;
-           display: flex;
-           flex-wrap: wrap;
-           
-       }
-       .boton-instagram{
-           background-image: url("./image/unnamed.png");
-           background-size: 120px;
-           background-repeat: no-repeat;
-           background-position:center;
-           padding: 10px;
-           border: none;
-           width: 150px;
-           cursor: pointer;
-       }
-       input .nn .buscador{
-           width: 180px;
-
-       }
-       .icon-interactive{
-           justify-content: end;
-       }
-    </style>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <header>
-        <nav>
-            <div>
-                <input class="boton-instagram" type="button" value="">
-                <div class="nn">
-                    <input class="buscador" type="text" name="instagran" id="" placeholder="Buscar"  >
+        <nav class="conteiner">
+            <div class="logo">
+                <figure class="logo-insta">
+                    <img src="./image/unnamed.png" width="110" height="30" alt="">
+                </figure>
+            </div>
+            <div class="buscador">
+                <input type="text" value="" placeholder="Buscar"  >
+                <div class="icon">
+                    <span class="L">
+                        <img src="./image/lupa.png" width="10" height="10" alt="">
+                    </span>
                 </div>
             </div>
-            <div>
-                <a class="icon-interactive" href="">
-                    <input type="image" src="https://static.thenounproject.com/png/682477-200.png" width="40" height="40" alt="">
-                    <input type="image" src="https://es.seaicons.com/wp-content/uploads/2015/06/Messaging-Sent-icon.png" width="40" height="40" alt="">
-                    <input type="image" src="https://image.flaticon.com/icons/svg/61/61046.svg" width="40" height="40" alt="">
-                </a>
-            </div>
+                <div class="set">
+                    <input class="home" type="image" src="https://static.thenounproject.com/png/682477-200.png" width="29" height="29" alt="">
+                    <input class="car" type="image" src="https://es.seaicons.com/wp-content/uploads/2015/06/Messaging-Sent-icon.png" width="29" height="29" alt="">
+                    <input class="bru" type="image" src="https://cdn.icon-icons.com/icons2/1129/PNG/512/compass_79805.png" width="29" height="29" alt="">
+                    <input class="like" type="image" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png" width="29" height="29" alt="">
+                </div>
         </nav>
     </header>
+    <main class="prin">
+        <section class="perfil">
+            <div class="foto">
+                <input class="foto1" type="image" src="https://octodex.github.com/images/femalecodertocat.png" width="190" height="190" alt="">
+            </div>
+            <div class="usua">
+                <h1>Irlana_frontend</h1>
+            </div>
+            <div class="editar-ferfil">
+                <button>Editar</button>
+            </div>
+            <div class="ajus">
+                <input type="image" src="https://cdn.pixabay.com/photo/2016/01/03/11/24/gear-1119298_1280.png"  width="30" height="30"alt="">
+            </div>
+            <section class="follow">
+                <ul>
+                    <li class="item"> 
+                        <span> 1000 Publicaciones </span>
+                    </li>
+                    <li class="item">
+                        <span>500 Seguidores</span>
+                    </li>
+                    <li class="item">
+                        <span> 900 Seguidos </span>
+                    </li>
+                </ul>
+            </section>
+            <div class="des">
+                <p>
+                    <h2> Irlanda Morales</h2> 
+                    Jr Frontend Developer en Voicelastic <br>
+                    Bogotá, Distrito Capital, Colombia
+                </p>
+            </div>
+        </section>
+    </main>
+   
     <section class="post-list">
         <a href="" class="post">
             <figure class="post-image">
@@ -117,6 +83,17 @@
         <a href="" class="post">
             <figure class="post-image">
                 <img src="./image/compu12.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-like">200</span>
+                    <span class="post-comments">50</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="https://storage.googleapis.com/gopherizeme.appspot.com/gophers/049ea1c2953507ef45c075223bb6c357637ffe6a.png" alt="">
             </figure>
             <div class="post-overlay">
                 <p>
