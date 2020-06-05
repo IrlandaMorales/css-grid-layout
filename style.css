@@ -71,7 +71,10 @@ header nav{
     border: 1px solid #e1e1e1;
     box-shadow: 3px  #e1e1e1;
     border-radius: 5px;
-
+    background-image: url(./image/lupa.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 input span img{
     /* display: inline-block; */
@@ -87,7 +90,84 @@ input span img{
     height: 30px;
 }
 
-main{
-    grid-template: repeat();
+main section{
+    display: grid;
+    grid-template: 1fr 120px /  1fr 480px 110px 1fr;
 }
+ .foto .foto1{
+    width: 230px;
+    height: 230px;
+    text-align: center;
+    justify-content: center;
+    clip-path: circle(40% at 50% 50%);
+    /* box-sizing: border-box; */
+    border: 1px solid #b6b6b5;
 
+}
+.foto:nth-of-type(1){
+    align-self: center;
+    justify-self: right;
+    
+    
+}
+ .usua:nth-of-type(2) {
+    text-decoration: none;
+    /* justify-content: center; */
+    font-size: 40px; 
+    /* margin-top: 60px; */
+    align-self: flex-end;
+    justify-self: right;
+    
+ }
+ .editar-ferfil button{
+     width: 100px;
+     border: 2px solid rgba(var(--ca6,219,219,219),1);
+     /* box-shadow: 1px  #dddddd; */
+     background-color: transparent;
+     padding: 5px;
+     font-size: 15px;
+     font-style: italic;
+     font-weight: 500;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+ .editar-ferfil:nth-of-type(3) {
+     align-self: center;
+     justify-self: left;
+     margin-top: 15px;
+     
+ }
+ .ajus:nth-of-type(4) {
+    align-self: center;
+    justify-self: left;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.follow:nth-of-type(5) {
+    grid-column: 2 / -1;
+    align-self: stretch;
+    justify-self: left;
+}
+.des:nth-of-type(6) {
+    grid-row: 2;
+    align-self: baseline;
+    justify-self: right;
+    font-size: 15px;
+}
+.item{
+    text-decoration: none;
+    display: flex;
+    display: inline-block;
+    margin: 10px ;
+    font-size: 19px;
+}
+@media screen and (max-width: 768px){
+    .perfil{
+        gap:3px;
+     }
+ }
+ hr{
+    background-color: #dddddd; 
+    width: 70%;
+    height: 1px;
+ }
